@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://vymv5p.csb.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./index.js.download"></script><script src="./preview-protocol.js.download" async="" defer=""></script>
+    <script crossorigin="" type="text/javascript" src="./vendors~app~embed~sandbox-startup.1c90fe343.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./default~app~embed~sandbox~sandbox-startup.50b1b6fe8.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./sandbox-startup.633001cb1.js.download"></script><link href="https://codesandbox.io/static/js/babel.7.21.8.min.js" rel="prefetch" as="script">
+
+<script src="./browserfs.min.js.download" type="text/javascript"></script>
+
+<script>
+  window.process = BrowserFS.BFSRequire('process');
+  window.Buffer = BrowserFS.BFSRequire('buffer').Buffer;
+</script>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan's Roses</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="./css2" rel="stylesheet">
+    <link rel="stylesheet" href="./all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js.download" defer=""></script>
+    <link rel="manifest" href="https://vymv5p.csb.app/manifest.json">
+  <style id="/css/normalize.css:-css" type="text/css">/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+</style><style id="/css/styles.css:-css" type="text/css">html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: "Open Sans";
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3b3b3b;
+  text-transform: uppercase;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+  font-family: "Libre Baskerville", serif;
+  line-height: 1em;
+  color: #fe8181;
+}
+
+h1.main-title {
+  margin: 0.25em;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.56em;
+  padding-top: 1.5em;
+  font-family: "Libre Baskerville", serif;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.285;
+  margin: 1.5em 0;
+}
+
+ol li {
+  padding: 1em;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25em;
+}
+
+.tagline {
+  padding: 0em;
+  margin-top: -0.2em;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  text-transform: lowercase;
+  color: #fe8181;
+}
+
+.fresh {
+  font-size: 1.25em;
+  text-transform: lowercase;
+}
+
+.fancy {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+}
+.content-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 5em;
+  background-color: #fff0f0;
+}
+
+h2 {
+  color: #3b3b3b;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.logo {
+  background-color: transparent;
+  max-width: 100px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 1em;
+}
+
+.top-nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-nav h2,
+.top-nav nav {
+  width: 100%;
+}
+
+.top-nav h2 {
+  text-align: center;
+  margin: 0.75em;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 1em 0.75em;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.intro {
+  margin-top: 2em;
+}
+
+.intro p {
+  font-size: 1.5em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #fe8181;
+  text-transform: Uppercase;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery figure {
+  width: 100%;
+  padding: 1.5em 0;
+}
+
+.gallery figcaption {
+  text-align: center;
+  padding: 1em;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 3em;
+}
+
+.contact .content-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact ul {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 275px;
+}
+
+.contact i {
+  font-size: 2em;
+}
+
+.contact p {
+  margin: 0 0 1em;
+  font-size: 1.25em;
+}
+
+.contact address {
+  text-align: center;
+  font-style: normal;
+  padding-bottom: 2.5em;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .top-nav h2 {
+    text-align: left;
+  }
+
+  .top-nav h2,
+  .top-nav nav {
+    width: 40%;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  .gallery figure {
+    width: 45%;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-nav {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery figure {
+    width: 30%;
+  }
+}
+</style><script charset="utf-8" src="./0.f62fbfd4b.chunk.js.download"></script><script charset="utf-8" src="./1.390d5cd6d.chunk.js.download"></script><script charset="utf-8" src="./2.77529c16f.chunk.js.download"></script><script charset="utf-8" src="./7.14bd680f6.chunk.js.download"></script></head>
+  <body><div id="highlighter"></div>
+    <header>
+      <div class="top-nav">
+        <div class="content-wrapper">
+          <p class="fresh">
+            Fresh <span class="fancy">&amp;</span> locally grown
+          </p>
+          <nav>
+            <ul>
+              <li>Today's Specials</li>
+              <li>Contact Us</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <img class="logo" src="./rose@2x.png" alt="Flower">
+        <h1 class="main-title">ryan's roses</h1>
+        <h2 class="tagline" style="text-transform: capitalize;">Express Yoself!</h2>
+      </div>
+    </header>
+    <main class="content-wrapper">
+      <div class="intro">
+        <p>Available today</p>
+      </div>
+      <section class="gallery">
+        <figure>
+          <img src="./clara.jpeg" alt="Flower bouquet">
+          <figcaption>The Clara.</figcaption>
+        </figure>
+        <figure>
+          <img src="./joan.jpeg" alt="Flower bouquet">
+          <figcaption>The Elizabeth.</figcaption>
+        </figure>
+        <figure>
+          <img src="./jonas.jpeg" alt="Flower bouquet">
+          <figcaption>The Jonas.</figcaption>
+        </figure>
+        <figure>
+          <img src="./nell.jpeg" alt="Flower bouquet">
+          <figcaption>The Nell.</figcaption>
+        </figure>
+        <figure>
+          <img src="./phillip.jpeg" alt="Flower bouquet">
+          <figcaption>The Philip.</figcaption>
+        </figure>
+        <figure>
+          <img src="./sasha.jpeg" alt="Flower bouquet">
+          <figcaption>The Sasha.</figcaption>
+        </figure>
+      </section>
+    </main>
+    <footer class="contact" style="background-color: rgb(215, 221, 243);">
+      <div class="content-wrapper">
+        <h3>We're here for you <em>every day</em> of the week.</h3>
+        <p>Mon-Fri 9-9 | Sat-Sun 9-5</p>
+        <address style="line-height: 1.5em; font-size: 1.75em;">
+          +1-555-989-2339<br>
+          2746 Bloomington Ave <br>
+        </address>
+        <ul>
+          <li>
+            <a href="https://vymv5p.csb.app/#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://vymv5p.csb.app/#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://vymv5p.csb.app/#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://vymv5p.csb.app/#"><i class="fas fa-mobile-alt"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script crossorigin="" type="text/javascript" src="./vendors~app~codemirror-editor~monaco-editor~sandbox.a0a9d9986.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./common-sandbox.09f563264.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./vendors~app~sandbox.d07ab9245.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./vendors~sandbox.cb6b5ecc4.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./default~app~embed~sandbox.e54fe6292.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./sandbox.a91292f6d.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./banner.d9cb10a38.js.download"></script>
+  <script>
+window.__SANDBOX_DATA__ = {
+  data: {"transpiledModules":{"/css/normalize.css:":{"query":"","module":{"code":"/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers.\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Render the `main` element consistently in IE.\n */\n\nmain {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * Remove the gray background on active links in IE 10.\n */\n\na {\n  background-color: transparent;\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Remove the border on images inside links in IE 10.\n */\n\nimg {\n  border-style: none;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput {\n  /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect {\n  /* 1 */\n  text-transform: none;\n}\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  vertical-align: baseline;\n}\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\n\ndetails {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Misc\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10+.\n */\n\ntemplate {\n  display: none;\n}\n\n/**\n * Add the correct display in IE 10.\n */\n\n[hidden] {\n  display: none;\n}\n","path":"/css/normalize.css"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/css/normalize.css","compiledCode":"\nfunction createStyleNode(id, content) {\n  var styleNode =\n    document.getElementById(id) || document.createElement('style');\n\n  styleNode.setAttribute('id', id);\n  styleNode.type = 'text/css';\n  if (styleNode.styleSheet) {\n    styleNode.styleSheet.cssText = content;\n  } else {\n    styleNode.innerHTML = '';\n    styleNode.appendChild(document.createTextNode(content));\n  }\n  document.head.appendChild(styleNode);\n}\n\ncreateStyleNode(\n  \"/css/normalize.css:-css\",\n  \"/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\\n\\n/* Document\\n   ========================================================================== */\\n\\n/**\\n * 1. Correct the line height in all browsers.\\n * 2. Prevent adjustments of font size after orientation changes in iOS.\\n */\\n\\nhtml {\\n  line-height: 1.15; /* 1 */\\n  -webkit-text-size-adjust: 100%; /* 2 */\\n}\\n\\n/* Sections\\n   ========================================================================== */\\n\\n/**\\n * Remove the margin in all browsers.\\n */\\n\\nbody {\\n  margin: 0;\\n}\\n\\n/**\\n * Render the `main` element consistently in IE.\\n */\\n\\nmain {\\n  display: block;\\n}\\n\\n/**\\n * Correct the font size and margin on `h1` elements within `section` and\\n * `article` contexts in Chrome, Firefox, and Safari.\\n */\\n\\nh1 {\\n  font-size: 2em;\\n  margin: 0.67em 0;\\n}\\n\\n/* Grouping content\\n   ========================================================================== */\\n\\n/**\\n * 1. Add the correct box sizing in Firefox.\\n * 2. Show the overflow in Edge and IE.\\n */\\n\\nhr {\\n  box-sizing: content-box; /* 1 */\\n  height: 0; /* 1 */\\n  overflow: visible; /* 2 */\\n}\\n\\n/**\\n * 1. Correct the inheritance and scaling of font size in all browsers.\\n * 2. Correct the odd `em` font sizing in all browsers.\\n */\\n\\npre {\\n  font-family: monospace, monospace; /* 1 */\\n  font-size: 1em; /* 2 */\\n}\\n\\n/* Text-level semantics\\n   ========================================================================== */\\n\\n/**\\n * Remove the gray background on active links in IE 10.\\n */\\n\\na {\\n  background-color: transparent;\\n}\\n\\n/**\\n * 1. Remove the bottom border in Chrome 57-\\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\\n */\\n\\nabbr[title] {\\n  border-bottom: none; /* 1 */\\n  text-decoration: underline; /* 2 */\\n  text-decoration: underline dotted; /* 2 */\\n}\\n\\n/**\\n * Add the correct font weight in Chrome, Edge, and Safari.\\n */\\n\\nb,\\nstrong {\\n  font-weight: bolder;\\n}\\n\\n/**\\n * 1. Correct the inheritance and scaling of font size in all browsers.\\n * 2. Correct the odd `em` font sizing in all browsers.\\n */\\n\\ncode,\\nkbd,\\nsamp {\\n  font-family: monospace, monospace; /* 1 */\\n  font-size: 1em; /* 2 */\\n}\\n\\n/**\\n * Add the correct font size in all browsers.\\n */\\n\\nsmall {\\n  font-size: 80%;\\n}\\n\\n/**\\n * Prevent `sub` and `sup` elements from affecting the line height in\\n * all browsers.\\n */\\n\\nsub,\\nsup {\\n  font-size: 75%;\\n  line-height: 0;\\n  position: relative;\\n  vertical-align: baseline;\\n}\\n\\nsub {\\n  bottom: -0.25em;\\n}\\n\\nsup {\\n  top: -0.5em;\\n}\\n\\n/* Embedded content\\n   ========================================================================== */\\n\\n/**\\n * Remove the border on images inside links in IE 10.\\n */\\n\\nimg {\\n  border-style: none;\\n}\\n\\n/* Forms\\n   ========================================================================== */\\n\\n/**\\n * 1. Change the font styles in all browsers.\\n * 2. Remove the margin in Firefox and Safari.\\n */\\n\\nbutton,\\ninput,\\noptgroup,\\nselect,\\ntextarea {\\n  font-family: inherit; /* 1 */\\n  font-size: 100%; /* 1 */\\n  line-height: 1.15; /* 1 */\\n  margin: 0; /* 2 */\\n}\\n\\n/**\\n * Show the overflow in IE.\\n * 1. Show the overflow in Edge.\\n */\\n\\nbutton,\\ninput {\\n  /* 1 */\\n  overflow: visible;\\n}\\n\\n/**\\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\\n * 1. Remove the inheritance of text transform in Firefox.\\n */\\n\\nbutton,\\nselect {\\n  /* 1 */\\n  text-transform: none;\\n}\\n\\n/**\\n * Correct the inability to style clickable types in iOS and Safari.\\n */\\n\\nbutton,\\n[type=\\\"button\\\"],\\n[type=\\\"reset\\\"],\\n[type=\\\"submit\\\"] {\\n  -webkit-appearance: button;\\n}\\n\\n/**\\n * Remove the inner border and padding in Firefox.\\n */\\n\\nbutton::-moz-focus-inner,\\n[type=\\\"button\\\"]::-moz-focus-inner,\\n[type=\\\"reset\\\"]::-moz-focus-inner,\\n[type=\\\"submit\\\"]::-moz-focus-inner {\\n  border-style: none;\\n  padding: 0;\\n}\\n\\n/**\\n * Restore the focus styles unset by the previous rule.\\n */\\n\\nbutton:-moz-focusring,\\n[type=\\\"button\\\"]:-moz-focusring,\\n[type=\\\"reset\\\"]:-moz-focusring,\\n[type=\\\"submit\\\"]:-moz-focusring {\\n  outline: 1px dotted ButtonText;\\n}\\n\\n/**\\n * Correct the padding in Firefox.\\n */\\n\\nfieldset {\\n  padding: 0.35em 0.75em 0.625em;\\n}\\n\\n/**\\n * 1. Correct the text wrapping in Edge and IE.\\n * 2. Correct the color inheritance from `fieldset` elements in IE.\\n * 3. Remove the padding so developers are not caught out when they zero out\\n *    `fieldset` elements in all browsers.\\n */\\n\\nlegend {\\n  box-sizing: border-box; /* 1 */\\n  color: inherit; /* 2 */\\n  display: table; /* 1 */\\n  max-width: 100%; /* 1 */\\n  padding: 0; /* 3 */\\n  white-space: normal; /* 1 */\\n}\\n\\n/**\\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\\n */\\n\\nprogress {\\n  vertical-align: baseline;\\n}\\n\\n/**\\n * Remove the default vertical scrollbar in IE 10+.\\n */\\n\\ntextarea {\\n  overflow: auto;\\n}\\n\\n/**\\n * 1. Add the correct box sizing in IE 10.\\n * 2. Remove the padding in IE 10.\\n */\\n\\n[type=\\\"checkbox\\\"],\\n[type=\\\"radio\\\"] {\\n  box-sizing: border-box; /* 1 */\\n  padding: 0; /* 2 */\\n}\\n\\n/**\\n * Correct the cursor style of increment and decrement buttons in Chrome.\\n */\\n\\n[type=\\\"number\\\"]::-webkit-inner-spin-button,\\n[type=\\\"number\\\"]::-webkit-outer-spin-button {\\n  height: auto;\\n}\\n\\n/**\\n * 1. Correct the odd appearance in Chrome and Safari.\\n * 2. Correct the outline style in Safari.\\n */\\n\\n[type=\\\"search\\\"] {\\n  -webkit-appearance: textfield; /* 1 */\\n  outline-offset: -2px; /* 2 */\\n}\\n\\n/**\\n * Remove the inner padding in Chrome and Safari on macOS.\\n */\\n\\n[type=\\\"search\\\"]::-webkit-search-decoration {\\n  -webkit-appearance: none;\\n}\\n\\n/**\\n * 1. Correct the inability to style clickable types in iOS and Safari.\\n * 2. Change font properties to `inherit` in Safari.\\n */\\n\\n::-webkit-file-upload-button {\\n  -webkit-appearance: button; /* 1 */\\n  font: inherit; /* 2 */\\n}\\n\\n/* Interactive\\n   ========================================================================== */\\n\\n/*\\n * Add the correct display in Edge, IE 10+, and Firefox.\\n */\\n\\ndetails {\\n  display: block;\\n}\\n\\n/*\\n * Add the correct display in all browsers.\\n */\\n\\nsummary {\\n  display: list-item;\\n}\\n\\n/* Misc\\n   ========================================================================== */\\n\\n/**\\n * Add the correct display in IE 10+.\\n */\\n\\ntemplate {\\n  display: none;\\n}\\n\\n/**\\n * Add the correct display in IE 10.\\n */\\n\\n[hidden] {\\n  display: none;\\n}\\n\"\n);\n\n\n","sourceEqualsCompiled":false}},"/img/clara.jpeg:":{"query":"","module":{"code":"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/bqTA-clara.jpeg","path":"/img/clara.jpeg"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/img/clara.jpeg","compiledCode":"\n      module.exports = \"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/bqTA-clara.jpeg\";","sourceEqualsCompiled":false}},"/img/joan.jpeg:":{"query":"","module":{"code":"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/DZ9y-joan.jpeg","path":"/img/joan.jpeg"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/img/joan.jpeg","compiledCode":"\n      module.exports = \"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/DZ9y-joan.jpeg\";","sourceEqualsCompiled":false}},"/img/jonas.jpeg:":{"query":"","module":{"code":"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/1i1h-jonas.jpeg","path":"/img/jonas.jpeg"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/img/jonas.jpeg","compiledCode":"\n      module.exports = \"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/1i1h-jonas.jpeg\";","sourceEqualsCompiled":false}},"/img/nell.jpeg:":{"query":"","module":{"code":"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/CDCR-nell.jpeg","path":"/img/nell.jpeg"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/img/nell.jpeg","compiledCode":"\n      module.exports = \"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/CDCR-nell.jpeg\";","sourceEqualsCompiled":false}},"/img/phillip.jpeg:":{"query":"","module":{"code":"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/bnoc-phillip.jpeg","path":"/img/phillip.jpeg"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/img/phillip.jpeg","compiledCode":"\n      module.exports = \"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/bnoc-phillip.jpeg\";","sourceEqualsCompiled":false}},"/img/sasha.jpeg:":{"query":"","module":{"code":"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/dq1w-sasha.jpeg","path":"/img/sasha.jpeg"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/img/sasha.jpeg","compiledCode":"\n      module.exports = \"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/dq1w-sasha.jpeg\";","sourceEqualsCompiled":false}},"/index.html:":{"query":"","module":{"code":"\u003c!DOCTYPE html>\n\u003chtml lang=\"en\">\n  \u003chead>\n    \u003cmeta charset=\"UTF-8\" />\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    \u003ctitle>Ryan's Roses\u003c/title>\n    \u003clink rel=\"preconnect\" href=\"https://fonts.gstatic.com\" />\n    \u003clink\n      href=\"https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Open+Sans:wght@400;700&display=swap\"\n      rel=\"stylesheet\"\n    />\n    \u003clink\n      rel=\"stylesheet\"\n      href=\"https://pro.fontawesome.com/releases/v5.10.0/css/all.css\"\n      integrity=\"sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p\"\n      crossorigin=\"anonymous\"\n    />\n    \u003clink rel=\"stylesheet\" href=\"css/normalize.css\" />\n    \u003clink rel=\"stylesheet\" href=\"css/styles.css\" />\n    \u003cscript src=\"js/script.js\" defer>\u003c/script>\n  \u003c/head>\n  \u003cbody>\n    \u003cheader>\n      \u003cdiv class=\"top-nav\">\n        \u003cdiv class=\"content-wrapper\">\n          \u003cp class=\"fresh\">\n            Fresh \u003cspan class=\"fancy\">&amp;\u003c/span> locally grown\n          \u003c/p>\n          \u003cnav>\n            \u003cul>\n              \u003cli>Today's Specials\u003c/li>\n              \u003cli>Contact Us\u003c/li>\n            \u003c/ul>\n          \u003c/nav>\n        \u003c/div>\n      \u003c/div>\n      \u003cdiv class=\"content-wrapper\">\n        \u003cimg class=\"logo\" src=\"img/rose@2x.png\" alt=\"Flower\" />\n        \u003ch1 class=\"main-title\">ryan's roses\u003c/h1>\n        \u003ch2 class=\"tagline\">Express yourself without saying a word.\u003c/h2>\n      \u003c/div>\n    \u003c/header>\n    \u003cmain class=\"content-wrapper\">\n      \u003cdiv class=\"intro\">\n        \u003cp>Available today\u003c/p>\n      \u003c/div>\n      \u003csection class=\"gallery\">\n        \u003cfigure>\n          \u003cimg src=\"img/clara.jpeg\" alt=\"Flower bouquet\" />\n          \u003cfigcaption>The Clara.\u003c/figcaption>\n        \u003c/figure>\n        \u003cfigure>\n          \u003cimg src=\"img/joan.jpeg\" alt=\"Flower bouquet\" />\n          \u003cfigcaption>The Elizabeth.\u003c/figcaption>\n        \u003c/figure>\n        \u003cfigure>\n          \u003cimg src=\"img/jonas.jpeg\" alt=\"Flower bouquet\" />\n          \u003cfigcaption>The Jonas.\u003c/figcaption>\n        \u003c/figure>\n        \u003cfigure>\n          \u003cimg src=\"img/nell.jpeg\" alt=\"Flower bouquet\" />\n          \u003cfigcaption>The Nell.\u003c/figcaption>\n        \u003c/figure>\n        \u003cfigure>\n          \u003cimg src=\"img/phillip.jpeg\" alt=\"Flower bouquet\" />\n          \u003cfigcaption>The Philip.\u003c/figcaption>\n        \u003c/figure>\n        \u003cfigure>\n          \u003cimg src=\"img/sasha.jpeg\" alt=\"Flower bouquet\" />\n          \u003cfigcaption>The Sasha.\u003c/figcaption>\n        \u003c/figure>\n      \u003c/section>\n    \u003c/main>\n    \u003cfooter class=\"contact\">\n      \u003cdiv class=\"content-wrapper\">\n        \u003ch3>We're here for you every day of the week.\u003c/h3>\n        \u003cp>Mon-Fri 9-9 | Sat-Sun 9-5\u003c/p>\n        \u003caddress>\n          +1-555-989-2339\u003cbr />\n          2746 Bloomington Ave \u003cbr />\n        \u003c/address>\n        \u003cul>\n          \u003cli>\n            \u003ca href=\"#\">\u003ci class=\"fab fa-facebook\">\u003c/i>\u003c/a>\n          \u003c/li>\n          \u003cli>\n            \u003ca href=\"#\">\u003ci class=\"fab fa-twitter\">\u003c/i>\u003c/a>\n          \u003c/li>\n          \u003cli>\n            \u003ca href=\"#\">\u003ci class=\"fab fa-instagram\">\u003c/i>\u003c/a>\n          \u003c/li>\n          \u003cli>\n            \u003ca href=\"#\">\u003ci class=\"fas fa-mobile-alt\">\u003c/i>\u003c/a>\n          \u003c/li>\n        \u003c/ul>\n      \u003c/div>\n    \u003c/footer>\n  \u003c/body>\n\u003c/html>\n","path":"/index.html"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":["/css/normalize.css:","/img/clara.jpeg:","/img/joan.jpeg:","/img/jonas.jpeg:","/img/nell.jpeg:","/img/phillip.jpeg:","/img/sasha.jpeg:","/css/styles.css:","/js/script.js:","/img/rose@2x.png:"],"initiators":[],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/index.html","compiledCode":"\nfunction loadResources() {\n\trequire(\"./css/normalize.css\");\n\n\trequire(\"./css/styles.css\");\n\n\trequire(\"./js/script.js\");\n\n\trequire(\"./img/rose@2x.png\");\n\n\trequire(\"./img/clara.jpeg\");\n\n\trequire(\"./img/joan.jpeg\");\n\n\trequire(\"./img/jonas.jpeg\");\n\n\trequire(\"./img/nell.jpeg\");\n\n\trequire(\"./img/phillip.jpeg\");\n\n\trequire(\"./img/sasha.jpeg\");\n\n}\nif (document.readyState !== 'complete') {\n  window.addEventListener('load', function() { loadResources() });\n} else {\n  loadResources();\n}\n\n","sourceEqualsCompiled":false}},"/img/rose@2x.png:":{"query":"","module":{"code":"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/SZmH-rose@2x.png","path":"/img/rose@2x.png"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/img/rose@2x.png","compiledCode":"\n      module.exports = \"https://uploads.codesandbox.io/uploads/user/8b0d8cde-5944-411b-90cb-6f84746a4292/SZmH-rose@2x.png\";","sourceEqualsCompiled":false}},"/css/styles.css:":{"query":"","module":{"code":"html {\n  color: #222;\n  font-size: 1em;\n  line-height: 1.4;\n  font-family: \"Open Sans\";\n}\n\nbody {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  font-size: 1em;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\na {\n  text-decoration: none;\n  color: #3b3b3b;\n  text-transform: uppercase;\n}\n\nh1 {\n  width: 100%;\n  text-align: center;\n  font-size: 5em;\n  font-family: \"Libre Baskerville\", serif;\n  line-height: 1em;\n  color: #fe8181;\n}\n\nh1.main-title {\n  margin: 0.25em;\n}\n\nh3 {\n  font-weight: 500;\n  font-size: 1.56em;\n  padding-top: 1.5em;\n  font-family: \"Libre Baskerville\", serif;\n}\n\np {\n  font-size: 1em;\n  line-height: 1.285;\n  margin: 1.5em 0;\n}\n\nol li {\n  padding: 1em;\n}\n\nimg {\n  width: 100%;\n  border-radius: 10px;\n}\n\nfigure {\n  margin: 0;\n}\n\nfigcaption {\n  font-family: \"Open Sans\", sans-serif;\n  font-size: 1.25em;\n}\n\n.tagline {\n  padding: 0em;\n  margin-top: -0.2em;\n  font-weight: normal;\n  text-align: center;\n  font-family: \"Libre Baskerville\", serif;\n  font-style: italic;\n  text-transform: lowercase;\n  color: #fe8181;\n}\n\n.fresh {\n  font-size: 1.25em;\n  text-transform: lowercase;\n}\n\n.fancy {\n  font-family: \"Libre Baskerville\", serif;\n  font-style: italic;\n}\n.content-wrapper {\n  width: 90%;\n  max-width: 1200px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  align-items: center;\n}\n\nheader {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  padding-bottom: 5em;\n  background-color: #fff0f0;\n}\n\nh2 {\n  color: #3b3b3b;\n  font-family: \"Libre Baskerville\", serif;\n  font-style: italic;\n  text-transform: lowercase;\n}\n\n.logo {\n  background-color: transparent;\n  max-width: 100px;\n  margin-bottom: 0;\n  padding-bottom: 0;\n  margin-top: 1em;\n}\n\n.top-nav {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.top-nav h2,\n.top-nav nav {\n  width: 100%;\n}\n\n.top-nav h2 {\n  text-align: center;\n  margin: 0.75em;\n}\n\nnav ul {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n}\n\nnav ul li {\n  padding: 1em 0.75em;\n  font-size: 0.9em;\n  text-transform: uppercase;\n}\n\n.intro {\n  margin-top: 2em;\n}\n\n.intro p {\n  font-size: 1.5em;\n  padding-bottom: 8px;\n  border-bottom: 1px solid #fe8181;\n  text-transform: Uppercase;\n}\n\n.gallery {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.gallery figure {\n  width: 100%;\n  padding: 1.5em 0;\n}\n\n.gallery figcaption {\n  text-align: center;\n  padding: 1em;\n}\n\n.contact {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  padding-bottom: 3em;\n}\n\n.contact .content-wrapper {\n  flex-direction: column;\n  align-items: center;\n}\n\n.contact ul {\n  width: 45%;\n  display: flex;\n  justify-content: space-between;\n  max-width: 275px;\n}\n\n.contact i {\n  font-size: 2em;\n}\n\n.contact p {\n  margin: 0 0 1em;\n  font-size: 1.25em;\n}\n\n.contact address {\n  text-align: center;\n  font-style: normal;\n  padding-bottom: 2.5em;\n  font-family: \"Open Sans\";\n  font-size: 1.5em;\n  font-weight: bold;\n}\n\n@media (min-width: 768px) {\n  .top-nav h2 {\n    text-align: left;\n  }\n\n  .top-nav h2,\n  .top-nav nav {\n    width: 40%;\n  }\n\n  nav ul {\n    justify-content: flex-end;\n  }\n\n  .gallery figure {\n    width: 45%;\n  }\n\n  .gallery {\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .top-nav {\n    width: 100%;\n  }\n}\n\n@media (min-width: 1200px) {\n  .gallery figure {\n    width: 30%;\n  }\n}\n","path":"/css/styles.css"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/css/styles.css","compiledCode":"\nfunction createStyleNode(id, content) {\n  var styleNode =\n    document.getElementById(id) || document.createElement('style');\n\n  styleNode.setAttribute('id', id);\n  styleNode.type = 'text/css';\n  if (styleNode.styleSheet) {\n    styleNode.styleSheet.cssText = content;\n  } else {\n    styleNode.innerHTML = '';\n    styleNode.appendChild(document.createTextNode(content));\n  }\n  document.head.appendChild(styleNode);\n}\n\ncreateStyleNode(\n  \"/css/styles.css:-css\",\n  \"html {\\n  color: #222;\\n  font-size: 1em;\\n  line-height: 1.4;\\n  font-family: \\\"Open Sans\\\";\\n}\\n\\nbody {\\n  display: flex;\\n  flex-wrap: wrap;\\n  justify-content: center;\\n  font-size: 1em;\\n  font-family: \\\"Open Sans\\\", sans-serif;\\n}\\n\\nul {\\n  list-style-type: none;\\n  margin: 0;\\n  padding: 0;\\n}\\n\\na {\\n  text-decoration: none;\\n  color: #3b3b3b;\\n  text-transform: uppercase;\\n}\\n\\nh1 {\\n  width: 100%;\\n  text-align: center;\\n  font-size: 5em;\\n  font-family: \\\"Libre Baskerville\\\", serif;\\n  line-height: 1em;\\n  color: #fe8181;\\n}\\n\\nh1.main-title {\\n  margin: 0.25em;\\n}\\n\\nh3 {\\n  font-weight: 500;\\n  font-size: 1.56em;\\n  padding-top: 1.5em;\\n  font-family: \\\"Libre Baskerville\\\", serif;\\n}\\n\\np {\\n  font-size: 1em;\\n  line-height: 1.285;\\n  margin: 1.5em 0;\\n}\\n\\nol li {\\n  padding: 1em;\\n}\\n\\nimg {\\n  width: 100%;\\n  border-radius: 10px;\\n}\\n\\nfigure {\\n  margin: 0;\\n}\\n\\nfigcaption {\\n  font-family: \\\"Open Sans\\\", sans-serif;\\n  font-size: 1.25em;\\n}\\n\\n.tagline {\\n  padding: 0em;\\n  margin-top: -0.2em;\\n  font-weight: normal;\\n  text-align: center;\\n  font-family: \\\"Libre Baskerville\\\", serif;\\n  font-style: italic;\\n  text-transform: lowercase;\\n  color: #fe8181;\\n}\\n\\n.fresh {\\n  font-size: 1.25em;\\n  text-transform: lowercase;\\n}\\n\\n.fancy {\\n  font-family: \\\"Libre Baskerville\\\", serif;\\n  font-style: italic;\\n}\\n.content-wrapper {\\n  width: 90%;\\n  max-width: 1200px;\\n  display: flex;\\n  flex-wrap: wrap;\\n  justify-content: center;\\n  align-items: center;\\n}\\n\\nheader {\\n  width: 100%;\\n  display: flex;\\n  flex-wrap: wrap;\\n  justify-content: center;\\n  padding-bottom: 5em;\\n  background-color: #fff0f0;\\n}\\n\\nh2 {\\n  color: #3b3b3b;\\n  font-family: \\\"Libre Baskerville\\\", serif;\\n  font-style: italic;\\n  text-transform: lowercase;\\n}\\n\\n.logo {\\n  background-color: transparent;\\n  max-width: 100px;\\n  margin-bottom: 0;\\n  padding-bottom: 0;\\n  margin-top: 1em;\\n}\\n\\n.top-nav {\\n  width: 100%;\\n  display: flex;\\n  flex-wrap: wrap;\\n  justify-content: center;\\n}\\n\\n.top-nav h2,\\n.top-nav nav {\\n  width: 100%;\\n}\\n\\n.top-nav h2 {\\n  text-align: center;\\n  margin: 0.75em;\\n}\\n\\nnav ul {\\n  width: 100%;\\n  display: flex;\\n  justify-content: center;\\n}\\n\\nnav ul li {\\n  padding: 1em 0.75em;\\n  font-size: 0.9em;\\n  text-transform: uppercase;\\n}\\n\\n.intro {\\n  margin-top: 2em;\\n}\\n\\n.intro p {\\n  font-size: 1.5em;\\n  padding-bottom: 8px;\\n  border-bottom: 1px solid #fe8181;\\n  text-transform: Uppercase;\\n}\\n\\n.gallery {\\n  display: flex;\\n  flex-wrap: wrap;\\n  justify-content: center;\\n}\\n\\n.gallery figure {\\n  width: 100%;\\n  padding: 1.5em 0;\\n}\\n\\n.gallery figcaption {\\n  text-align: center;\\n  padding: 1em;\\n}\\n\\n.contact {\\n  width: 100%;\\n  display: flex;\\n  flex-wrap: wrap;\\n  justify-content: center;\\n  padding-bottom: 3em;\\n}\\n\\n.contact .content-wrapper {\\n  flex-direction: column;\\n  align-items: center;\\n}\\n\\n.contact ul {\\n  width: 45%;\\n  display: flex;\\n  justify-content: space-between;\\n  max-width: 275px;\\n}\\n\\n.contact i {\\n  font-size: 2em;\\n}\\n\\n.contact p {\\n  margin: 0 0 1em;\\n  font-size: 1.25em;\\n}\\n\\n.contact address {\\n  text-align: center;\\n  font-style: normal;\\n  padding-bottom: 2.5em;\\n  font-family: \\\"Open Sans\\\";\\n  font-size: 1.5em;\\n  font-weight: bold;\\n}\\n\\n@media (min-width: 768px) {\\n  .top-nav h2 {\\n    text-align: left;\\n  }\\n\\n  .top-nav h2,\\n  .top-nav nav {\\n    width: 40%;\\n  }\\n\\n  nav ul {\\n    justify-content: flex-end;\\n  }\\n\\n  .gallery figure {\\n    width: 45%;\\n  }\\n\\n  .gallery {\\n    display: flex;\\n    justify-content: space-between;\\n  }\\n\\n  .top-nav {\\n    width: 100%;\\n  }\\n}\\n\\n@media (min-width: 1200px) {\\n  .gallery figure {\\n    width: 30%;\\n  }\\n}\\n\"\n);\n\n\n","sourceEqualsCompiled":false}},"/js/script.js:":{"query":"","module":{"code":"var footer = document.querySelector(\"footer\");\r\nfooter.style.backgroundColor = \"#d7ddf3\";\r\n//console.log(footer.outerHTML);\r\n\r\nvar express = document.querySelector(\".tagline\");\r\nexpress.innerText = \"Express Yoself!\";\r\nexpress.style.textTransform = \"capitalize\";\r\n//console.log(express.innerText);\r\n\r\nvar address = document.querySelector(\"address\");\r\naddress.style.lineHeight = \"1.5em\";\r\naddress.style.fontSize = \"1.75em\";\r\n//console.log(address.outerHTML);\r\n\r\nvar everyDay = document.querySelector(\"h3\");\r\neveryDay.innerHTML = \"We're here for you \u003cem>every day\u003c/em> of the week.\";\r\n//console.log(everyDay.innerHTML);\r\n","path":"/js/script.js"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/js/script.js","compiledCode":"\"use strict\";\n\nvar footer = document.querySelector(\"footer\");\nfooter.style.backgroundColor = \"#d7ddf3\";\n//console.log(footer.outerHTML);\n\nvar express = document.querySelector(\".tagline\");\nexpress.innerText = \"Express Yoself!\";\nexpress.style.textTransform = \"capitalize\";\n//console.log(express.innerText);\n\nvar address = document.querySelector(\"address\");\naddress.style.lineHeight = \"1.5em\";\naddress.style.fontSize = \"1.75em\";\n//console.log(address.outerHTML);\n\nvar everyDay = document.querySelector(\"h3\");\neveryDay.innerHTML = \"We're here for you \u003cem>every day\u003c/em> of the week.\";\n//console.log(everyDay.innerHTML);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9qcy9zY3JpcHQuanMiXSwibmFtZXMiOlsiZm9vdGVyIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwic3R5bGUiLCJiYWNrZ3JvdW5kQ29sb3IiLCJleHByZXNzIiwiaW5uZXJUZXh0IiwidGV4dFRyYW5zZm9ybSIsImFkZHJlc3MiLCJsaW5lSGVpZ2h0IiwiZm9udFNpemUiLCJldmVyeURheSIsImlubmVySFRNTCJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJQSxTQUFTQyxTQUFTQyxhQUFULENBQXVCLFFBQXZCLENBQWI7QUFDQUYsT0FBT0csS0FBUCxDQUFhQyxlQUFiLEdBQStCLFNBQS9CO0FBQ0E7O0FBRUEsSUFBSUMsVUFBVUosU0FBU0MsYUFBVCxDQUF1QixVQUF2QixDQUFkO0FBQ0FHLFFBQVFDLFNBQVIsR0FBb0IsaUJBQXBCO0FBQ0FELFFBQVFGLEtBQVIsQ0FBY0ksYUFBZCxHQUE4QixZQUE5QjtBQUNBOztBQUVBLElBQUlDLFVBQVVQLFNBQVNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBZDtBQUNBTSxRQUFRTCxLQUFSLENBQWNNLFVBQWQsR0FBMkIsT0FBM0I7QUFDQUQsUUFBUUwsS0FBUixDQUFjTyxRQUFkLEdBQXlCLFFBQXpCO0FBQ0E7O0FBRUEsSUFBSUMsV0FBV1YsU0FBU0MsYUFBVCxDQUF1QixJQUF2QixDQUFmO0FBQ0FTLFNBQVNDLFNBQVQsR0FBcUIsb0RBQXJCO0FBQ0EiLCJmaWxlIjoic2NyaXB0LmpzIiwic291cmNlc0NvbnRlbnQiOlsidmFyIGZvb3RlciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJmb290ZXJcIik7XHJcbmZvb3Rlci5zdHlsZS5iYWNrZ3JvdW5kQ29sb3IgPSBcIiNkN2RkZjNcIjtcclxuLy9jb25zb2xlLmxvZyhmb290ZXIub3V0ZXJIVE1MKTtcclxuXHJcbnZhciBleHByZXNzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi50YWdsaW5lXCIpO1xyXG5leHByZXNzLmlubmVyVGV4dCA9IFwiRXhwcmVzcyBZb3NlbGYhXCI7XHJcbmV4cHJlc3Muc3R5bGUudGV4dFRyYW5zZm9ybSA9IFwiY2FwaXRhbGl6ZVwiO1xyXG4vL2NvbnNvbGUubG9nKGV4cHJlc3MuaW5uZXJUZXh0KTtcclxuXHJcbnZhciBhZGRyZXNzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImFkZHJlc3NcIik7XHJcbmFkZHJlc3Muc3R5bGUubGluZUhlaWdodCA9IFwiMS41ZW1cIjtcclxuYWRkcmVzcy5zdHlsZS5mb250U2l6ZSA9IFwiMS43NWVtXCI7XHJcbi8vY29uc29sZS5sb2coYWRkcmVzcy5vdXRlckhUTUwpO1xyXG5cclxudmFyIGV2ZXJ5RGF5ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImgzXCIpO1xyXG5ldmVyeURheS5pbm5lckhUTUwgPSBcIldlJ3JlIGhlcmUgZm9yIHlvdSA8ZW0+ZXZlcnkgZGF5PC9lbT4gb2YgdGhlIHdlZWsuXCI7XHJcbi8vY29uc29sZS5sb2coZXZlcnlEYXkuaW5uZXJIVE1MKTtcclxuIl19","sourceEqualsCompiled":false}}},"cachedPaths":{"/":{"./css/normalize.css":"/css/normalize.css","./css/styles.css":"/css/styles.css","./js/script.js":"/js/script.js","./img/rose@2x.png":"/img/rose@2x.png","./img/clara.jpeg":"/img/clara.jpeg","./img/joan.jpeg":"/img/joan.jpeg","./img/jonas.jpeg":"/img/jonas.jpeg","./img/nell.jpeg":"/img/nell.jpeg","./img/phillip.jpeg":"/img/phillip.jpeg","./img/sasha.jpeg":"/img/sasha.jpeg"}},"version":"https://codesandbox.io/static/js/sandbox.a91292f6d.js","timestamp":1712703478814,"configurations":{"package":{"path":"/package.json","code":"{\n  \"name\": \"js-lesson04-practice-exercise-01-starter\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.html\",\n  \"dependencies\": {},\n  \"keywords\": []\n}","generated":false,"parsed":{"name":"js-lesson04-practice-exercise-01-starter","version":"1.0.0","description":"","main":"index.html","dependencies":{},"keywords":[]}},"sandbox":{"path":"/sandbox.config.json","code":"{\n  \"infiniteLoopProtection\": true,\n  \"hardReloadOnChange\": false,\n  \"view\": \"browser\"\n}","generated":true,"parsed":{"infiniteLoopProtection":true,"hardReloadOnChange":false,"view":"browser"}},"now":{"path":"/vercel.json","code":"{}","generated":true,"parsed":{}},"babel":{"path":"/.babelrc","code":"{\n  \"presets\": [\n    \"env\"\n  ],\n  \"plugins\": [\n    [\n      \"transform-runtime\",\n      {\n        \"polyfill\": false,\n        \"regenerator\": true\n      }\n    ],\n    \"transform-object-rest-spread\"\n  ],\n  \"parserOpts\": {}\n}","generated":true,"parsed":{"presets":["env"],"plugins":[["transform-runtime",{"polyfill":false,"regenerator":true}],"transform-object-rest-spread"],"parserOpts":{}}},"typescript":{"path":"/tsconfig.json","code":"{\n  \"compilerOptions\": {\n    \"module\": \"commonjs\",\n    \"jsx\": \"preserve\",\n    \"esModuleInterop\": true,\n    \"sourceMap\": true,\n    \"allowJs\": true,\n    \"lib\": [\n      \"es6\",\n      \"dom\"\n    ],\n    \"rootDir\": \"src\",\n    \"moduleResolution\": \"node\"\n  }\n}","generated":true,"parsed":{"compilerOptions":{"module":"commonjs","jsx":"preserve","esModuleInterop":true,"sourceMap":true,"allowJs":true,"lib":["es6","dom"],"rootDir":"src","moduleResolution":"node"}}}},"entry":"/index.html","meta":{},"dependenciesQuery":"babel-runtime%406.26.0+node-libs-browser%402.2.1"},
+  latestSha: "D0E92682F370FF3D11EB1817351551596FF22BCC2DECB448EAAE4449675B105B",
+  version: "https://codesandbox.io/static/js/sandbox.a91292f6d.js"
+};
+
+</script>
+  <script crossorigin="" type="text/javascript" src="./watermark-button.eeb14a97b.js.download"></script>
+  
+
+
+</body></html>
